@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: lightgray;
+    height: 100vh;
+    display: grid;
+    grid-tenplate-areas: "header" "main" "footer";
+    grid-template-rows: 80px 1fr 30px;
+    font-family: "Poppins", sans-serif;
+}
+.sidenav {
+    background-color: #212121;
+    border-bottom-right-radius: 18px;
+    color: white;
+    height: 100vh;
+    width: 150px;
+    padding: 8px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    left: -150px;
+    transition: 0.8s ease-in-out;
+}
+.sidenav a {
+    margin: 8px;
+    text-decoration: none;
+    text-shadow: 1px 2px 2px black;
+    color: white;
+    transition: 0.8s ease;
+}
+.sidenav a:hover {
+    color: gray;
+    text-decoration: underline;
+}
+.botao {
+    background-color: #212121;
+    border-bottom-right-radius: 8px;
+    height: 36px;
+    width: 33px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 3px;
+    transition: 0.8s ease-in-out;
+}
+#botao {
+    display: none;
+}
+.button-label {
+    margin-top: 5px;
+    width: 100%;
+    position: relative;
+    display: block;
+}
+.button-label > span {
+    height: 4px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    background-color: white;
+    border-radius: 7px;
+    transition: 0.6s;
+}
+.button-label > span:nth-child(1) {
+    top: 0px;
+}
+.button-label > span:nth-child(2) {
+    top: 8px;
+}
+.button-label > span:nth-child(3) {
+    top: 16px;
+}
+#botao:checked ~ .button-label > span:nth-child(1) {
+    top: 8px;
+    transform: rotate(40deg);
+}
+#botao:checked ~ .button-label > span:nth-child(2) {
+    opacity: 0;
+}
+#botao:checked ~ .button-label > span:nth-child(3) {
+    top: 8px;
+    transform: rotate(-40deg);
+}
+header {
+    background-color: #212121;
+    color: white;
+    grid-area: "header";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.titulo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.titulo > p {
+    margin-right: 7px;
+}
+main {
+    background-color: lightgray;
+    grid-area: "main";
+    display: grid;
+    place-content: center;
+    width:100vw;
+}
+.box-table {
+  overflow-x:auto;
+}
+main > .box-table >table,
+main caption {
+    background-color: #212121;
+    border:1px solid white;
+    border-radius: 8px;
+    color: white;
+    padding: 6px;
+}
+main > .box-table >table {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    width: 20px;
+    border-collapse: collapse;
+}
+main > .box-table > table > caption {
+  border-bottom:none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+main > .box-table > table > thead > tr > th,
+main > .box-table > table > tbody > tr > td {
+    border:1px solid white;
+    text-align: center;
+    padding:8px;
+}
+main > .box-table > table > tbody > tr > td {
+  background-color:#545454;
+  padding:8px;
+}
+main > .box-table > table > tbody > tr > td > #edit {
+  background-color:black;
+  border-radius:6px;
+  color:white;
+  padding:3px;
+  text-decoration:none;
+  transition:all .8s ease;
+}
+main > .box-table > table > tbody > tr > td > #delete {
+  background-color:#e52626;
+  border-radius:6px;
+  color:white;
+  padding:3px;
+  text-decoration:none;
+  transition:all .8s ease;
+}
+main > .box-table >  table > tbody > tr > td > #edit:hover , main > .box-table > table > tbody > tr > td > #delete:hover {
+  background-color:#54545400;
+  text-decoration:underline;
+}
+footer {
+    background: #212121;
+    color: white;
+    grid-area: "footer";
+    text-align: center;
+    padding: 8px;
+}

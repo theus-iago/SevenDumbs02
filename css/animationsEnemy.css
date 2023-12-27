@@ -1,0 +1,34 @@
+@keyframes enemy01 {
+    0% {
+        left: -100px;
+        top: -100px;
+    }
+    100% {
+        left: 100%;
+        top: 80%;
+    }
+}
+@keyframes enemy02 {
+    0% {
+        left:60%;
+        top: -100px;
+    }
+    50% {
+        left:40%;
+        top: 90px;
+    }
+    100% {
+      left:0%;
+        top: 100%;
+    }
+}
+@keyframes enemy03 {
+    0% {
+        left: 100%;
+        top: -100px;
+    }
+    100% {
+        left: 0px;
+        top: 800px;
+    }
+}

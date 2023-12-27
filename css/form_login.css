@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body {
+  background-image:url('../images/fundo.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  height:100vh;
+  display:grid;
+  grid-template-areas: 
+   "form"
+   "footer"
+  ;
+  grid-template-columns:1fr;
+  grid-template-rows:1fr 40px;
+  font-family:'Poppins', sans-serif;
+}
+.sidenav {
+ background-color:#212121;
+ color:white;
+ height:100vh;
+ width:150px;
+ padding:8px;
+ display:flex;
+ align-items:start;
+ justify-content:start;
+ flex-direction:column;
+ position:absolute;
+ top:0px;
+ left:-150px;
+ transition:.8s ease-in-out;
+}
+.sidenav a {
+ margin:8px;
+ text-decoration:none;
+ text-shadow:1px 2px 2px black;
+ color:white;
+ transition:.8s ease;
+}
+.sidenav a:hover {
+ color:gray;
+ text-decoration:underline;
+}
+.botao { 
+ background-color:#212121;
+ border-bottom-right-radius:8px;
+ height:36px;
+ width:33px;
+ display:block;
+ position:absolute;
+ top:0px;
+ left:0px;
+ padding:3px;
+ transition:.8s ease-in-out;
+}
+#botao {
+ display:none;
+}
+.button-label {
+ margin-top:5px;
+ width:100%;
+ position:relative;
+ display:block;
+}
+.button-label > span {
+ height:4px;
+ width:100%;
+ display:block;
+ position:absolute;
+ background-color:white;
+ border-radius:7px;
+ transition:.6s;
+}
+.button-label > span:nth-child(1) {
+ top:0px;
+}
+.button-label > span:nth-child(2) {
+ top:8px;
+}
+.button-label > span:nth-child(3) {
+ top:16px;
+}
+#botao:checked ~ .button-label > span:nth-child(1) {
+ top:8px;
+ transform:rotate(40deg);
+}
+#botao:checked ~ .button-label > span:nth-child(2) {
+ opacity:0;
+}
+#botao:checked ~ .button-label > span:nth-child(3) {
+ top:8px;
+ transform:rotate(-40deg);
+}
+.form-box {
+ height:100%;
+ width:100%;
+ grid-area:"form";
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ flex-direction:column;
+}
+form {
+  background-color:#000000bb;
+  border-radius:8px;
+  color:white;
+  padding:30px;
+}
+h2 {
+  text-align:start;
+}
+p {
+  margin:5px;
+}
+#nome_usuario,#senha {
+  width:100%;
+  margin:5px;
+  padding:6px;
+}
+input:hover, input:focus {
+  outline:none;
+}
+.radios {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.botoes {
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+}
+.botaoForm {
+  background-color:black;
+  color:white;
+  border:none;
+  border-radius:6px;
+  padding:8px;
+}
+footer {
+ width:100%;
+ background:#212121;
+ color:white;
+ text-align:center;
+ padding:8px;
+ grid-area:"footer";
+}

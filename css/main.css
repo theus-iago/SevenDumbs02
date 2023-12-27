@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body {
+  background-image:url('../images/fundo.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  color:white;
+  height:100vh;
+  display:grid;
+  grid-template-areas:
+   "nav"
+   "footer"
+  ;
+  grid-template-rows:1fr 30px;
+  grid-template-columns:1fr;
+}
+.container {
+  background-color:#212121cd;
+  height:100%;
+  width:100%;
+}
+nav {
+  height:100%;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  grid-area:"nav";
+  text-align:center;
+}
+nav h1 {
+  font-family:'Poppins',sans-serif;
+}
+nav hr {
+  width:70%;
+  border-color:white;
+  border-style:solid;
+  border-radius:8px;
+}
+nav a {
+ margin:8px;
+ background-color:black;
+ border-radius:6px;
+ color:white;
+ padding:8px;
+ text-decoration:none;
+ transition:.8s ease;
+}
+nav a:hover {
+ text-decoration:underline;
+}
+.links {
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+footer {
+  height:30px;
+  width:100%;
+  background-color:#212121cd;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
