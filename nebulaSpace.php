@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/animationsEnemy.css" />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="images/NebulaSpace-logo.jpg"
+        />
+        <title>Nebula Space</title>
+        <script src="js/index.js" defer></script>
+    </head>
+    <body>
+        <div class="initial-game">
+            <header>
+                <h1>Nebula-Space</h1>
+                <br />
+                <div class="botoesHeader">
+                    <button onclick="jogar()">Play</button>
+                    <button>Settings</button>
+                </div>
+                <footer>
+                    <p>
+                        <a href="https://github.com/theus-iago" target="_blank">
+                            &copyIago_developer
+                        </a>
+                    </p>
+                </footer>
+            </header>
+        </div>
+        <div class="game-board">
+            <div class="life">
+                <img src="images/player.png" alt="playerLife" class="lifes" />
+                <img src="images/player.png" alt="playerLife" class="lifes" />
+                <img src="images/player.png" alt="playerLife" class="lifes" />
+            </div>
+            <div class="gameFrame">
+                <div class="game-score">
+                    <h2
+                        style="
+                            margin: 6px;
+                            font-family: &quot;Pixelify Sans&quot;, sans-serif;
+                        "
+                    >
+                        S
+                    </h2>
+                    <h2 class="score">
+                        <span class="numUnidade_ScoreM_Score">0</span
+                        ><span class="numCentena_Score">0</span
+                        ><span class="numDezena_Score">0</span
+                        ><span class="numUnidade_Score">0</span>
+                    </h2>
+                </div>
+                <div class="game-kills">
+                    <img src="images/meteoro.png" alt="kill" width="50" />
+                    <h2 class="kills">
+                        <span class="numUnidade_KillsM_Kills">0</span
+                        ><span class="numCentena_Kills">0</span
+                        ><span class="numDezena_Kills">0</span
+                        ><span class="numUnidade_Kills">0</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="shield"></div>
+            <div class="personagem" id="player"><div class="bullet"></div></div>
+            <div class="enemy" id="enemy01"></div>
+            <div class="enemy" id="enemy02"></div>
+            <div class="enemy" id="enemy03"></div>
+        </div>
+        <div class="botoes">
+            <div class="angulos">
+                <div
+                    class="botao"
+                    id="left"
+                    onclick="moverLeft()"
+                    onmousedown="moverLeft()"
+                ></div>
+                <div class="botao" id="right" onclick="moverRight()"></div>
+                <div class="botao" id="top" onclick="moverTop()"></div>
+                <div class="botao" id="bottom" onclick="moverBottom()"></div>
+            </div>
+            <div class="shootButton" onclick="shoot()">
+                <img src="images/fogo.png" alt="fire" />
+            </div>
+        </div>
+        <div class="game-over">
+            <div class="results">
+                <div class="scoreResult">
+                    <div class="tituloScore">
+                        <h1 class="Score-Logo">S</h1>
+                        <h2 class="resultScore"></h2>
+                    </div>
+                </div>
+                <div class="killResult">
+                    <div class="tituloKill">
+                        <img
+                            src="images/meteoro.png"
+                            alt="meteoro"
+                            width="50"
+                            class="Score-Logo"
+                        />
+                        <h2 class="resultKills"></h2>
+                    </div>
+                </div>
+            </div>
+            <section class="message">
+                <div class="header">
+                    <div class="titulo">
+                        <h1>Game-Over</h1>
+                    </div>
+                </div>
+                <p>Toque em Qualquer lugar da tela para voltar ao Menu</p>
+            </section>
+        </div>
+    </body>
+</html>
